@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ps.styles | Custom Apparel</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body, html {
+            font-family: Arial, sans-serif;
+            height: 100%;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header img {
+            max-height: 40px; /* Adjust height for the logo image */
+            width: auto; /* Maintain aspect ratio */
+        }
+        header nav ul {
+            list-style: none;
+            display: flex;
+        }
+        header nav ul li {
+            margin-left: 20px;
+        }
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        header nav ul li a:hover {
+            color: #f4a261;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('images/download.jpeg') center/cover no-repeat fixed;
+            text-align: center;
+            color: #fff;
+            padding: 150px 20px;
+        }
+        .hero img {
+            max-width: 80%;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .shop-now {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            color: #fff;
+            background-color: #f4a261;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .shop-now:hover {
+            background-color: #e76f51;
+        }
+
+        /* Product Categories with Parallax Effect */
+        .categories h2 {
+            text-align: center;
+            padding: 50px 0 20px;
+            font-size: 2em;
+            color: #333;
+        }
+        .parallax {
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 2em;
+            font-weight: bold;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .t-shirts {
+            background-image: url('images/Untitled.jpeg');
+        }
+        .sweatshirts {
+            background-image: url('images/71xUmQ8tROL._UF1000,1000_QL80_.jpg');
+        }
+        .pants {
+            background-image: url('images/geckocustom-custom-logo-senior-2024-sweatpants-k228-889997-34152237662385_600x.webp');
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            header nav ul {
+                flex-direction: column;
+                padding: 10px 0;
+            }
+            header nav ul li {
+                margin: 5px 0;
+            }
+            .hero {
+                padding: 80px 10px;
+            }
+            .categories {
+                padding: 20px 10px;
+            }
+            .category-card {
+                max-width: 150px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h2 {
+                font-size: 24px; /* Smaller font size on small devices */
+            }
+            .shop-now {
+                font-size: 16px; /* Smaller button text */
+            }
+            .categories h2 {
+                font-size: 22px; /* Smaller heading */
+            }
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <img src="images/download.jpeg" alt="ps.styles Logo" /> 
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <img src="images/download.jpeg" alt="Custom Apparel" /> <!-- Replacing the hero text with an image -->
+        <br>
+        <button class="shop-now">Shop Now</button>
+    </section>
+
+    <!-- Product Categories with Parallax Effect -->
+    <section id="shop" class="categories">
+        <h2>Our Collections</h2>
+        
+        <div class="parallax t-shirts">
+            <h3>T-Shirts</h3>
+        </div>
+
+        <div class="parallax sweatshirts">
+            <h3>Sweatshirts</h3>
+        </div>
+
+        <div class="parallax pants">
+            <h3>Pants</h3>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 ps.styles | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        // Placeholder for JavaScript functionality if needed
+        document.querySelector('.shop-now').addEventListener('click', () => {
+            window.scrollTo({
+                top: document.querySelector('#shop').offsetTop,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
